@@ -7,6 +7,7 @@ import { Canvas } from "@react-three/fiber";
 
 import FridgeClosed from './components/FridgeClosed';
 import FridgeOpen from './components/FridgeOpen';
+import MainWindow from './components/MainWindow';
 
 function App() {
   const canvasRef = useRef(null);
@@ -22,6 +23,7 @@ function App() {
             <FridgeClosed/>
           </Suspense>
         </Canvas>
+        <MainWindow/>
       </header>
     </div>
   );
