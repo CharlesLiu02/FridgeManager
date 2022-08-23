@@ -8,7 +8,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 
 function addItemRequest() {
-    // send data to backend
+    // TODO: send data to backend
     const response = request("http://127.0.0.1:5000/uuid/set", 'POST', {"name": "test item"});
     console.log(response);
 }

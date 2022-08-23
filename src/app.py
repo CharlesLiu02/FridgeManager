@@ -17,5 +17,5 @@ def get_fridge_items(fridge_uuid):
 # set item
 @app.route("/<fridge_uuid>/set", methods=['POST'])
 def create_item(fridge_uuid):
-    # set item in database
+    # TODO: set item in database
     return fridge_uuid

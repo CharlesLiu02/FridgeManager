@@ -12,10 +12,10 @@ import MainWindow from './components/MainWindow';
 function App() {
   const canvasRef = useRef(null);
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <div style={ {width: "100vw", height: "90vh"} }>
         <Canvas ref={canvasRef}>
-          <OrbitControls enableZoom={false} />
+          <OrbitControls enableZoom={true} />
           <ambientLight intensity={0.5} />
           <directionalLight position={[-2, 5, 2]} />
           <Suspense fallback={null}>
@@ -23,8 +23,8 @@ function App() {
             <FridgeClosed/>
           </Suspense>
         </Canvas>
-        <MainWindow/>
-      </header>
+      </div>
+      <MainWindow/>
     </div>
   );
 }
