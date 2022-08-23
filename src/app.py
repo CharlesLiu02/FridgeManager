@@ -1,6 +1,8 @@
-from flask import flask, send_from_directory
+from flask import Flask, send_from_directory
+from flask_cors import CORS
 
 app = Flask(__name__, static_url_path='', static_folder='frontend/build')
+CORS(app)
 
 # home page
 @app.route("/", defaults={'path':''})
@@ -12,7 +14,8 @@ def serve(path):
 def get_fridge_items(fridge_uuid):
     return 'fridge'
 
-# get item
-@app.route("<fridge_uuid>/set")
+# set item
+@app.route("/<fridge_uuid>/set", methods=['POST'])
 def create_item(fridge_uuid):
-    return
+    # set item in database
+    return fridge_uuid
